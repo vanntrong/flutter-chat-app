@@ -68,9 +68,9 @@ class SignInController extends GetxController {
                   toFirestore: (UserData userData, options) =>
                       userData.toFirestore())
               .add(data);
-          toastInfo(msg: "login success");
-          Get.offAndToNamed(AppRoutes.Application);
         }
+        toastInfo(msg: "login success");
+        Get.offAndToNamed(AppRoutes.Application);
       }
     } catch (e) {
       toastInfo(msg: "login err");
