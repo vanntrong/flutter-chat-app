@@ -20,6 +20,14 @@ class SignInController extends GetxController {
     try {
       var user = await _googleSignIn.signIn();
       if (user != null) {
+        final _gAuthentication = await user.authentication;
+        final credential = GoogleAuthProvider.credential(
+          idToken: _gAuthentication.idToken,
+          accessToken: _gAuthentication.accessToken,
+        );
+
+        await FirebaseAuth.instance.signInWithCredential(credential);
+
         String displayName = user.displayName ?? user.email;
         String email = user.email;
         String id = user.id;

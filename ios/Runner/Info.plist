@@ -47,6 +47,12 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+    <string>Access to your camera is required to capture photos required for loan processing or your profile.</string>
+    <key>NSLocationUsageDescription</key>
+    <string>To show your location on the map.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Needs permission for the photo library</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
