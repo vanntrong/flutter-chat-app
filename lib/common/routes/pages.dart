@@ -2,6 +2,9 @@ import 'package:firebase_chat/common/middlewares/middlewares.dart';
 import 'package:firebase_chat/pages/application/index.dart';
 import 'package:firebase_chat/pages/chat/index.dart';
 import 'package:firebase_chat/pages/contact/index.dart';
+import 'package:firebase_chat/pages/photoview/index.dart';
+import 'package:firebase_chat/pages/profile/bindings.dart';
+import 'package:firebase_chat/pages/profile/view.dart';
 import 'package:firebase_chat/pages/sign_in/bindings.dart';
 import 'package:firebase_chat/pages/sign_in/view.dart';
 import 'package:firebase_chat/pages/welcome/index.dart';
@@ -42,16 +45,21 @@ class AppPages {
         binding: ContactBinding()),
     GetPage(
         name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
-
-    /*
+    GetPage(
+        name: AppRoutes.Photoimgview,
+        page: () => PhotoImageView(),
+        binding: PhotoViewBinding()),
+    GetPage(
+        name: AppRoutes.Me,
+        page: () => ProfilePage(),
+        binding: ProfileBinding())
+/*
     GetPage(
         name: AppRoutes.Message,
         page: () => MessagePage(),
         binding: MessageBinding()),
     //我的
-    GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),
     //聊天详情
-
-    GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),*/
+    */
   ];
 }

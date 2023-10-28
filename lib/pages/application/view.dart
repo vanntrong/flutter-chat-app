@@ -2,6 +2,7 @@ import 'package:firebase_chat/common/values/colors.dart';
 import 'package:firebase_chat/pages/application/index.dart';
 import 'package:firebase_chat/pages/contact/index.dart';
 import 'package:firebase_chat/pages/message/view.dart';
+import 'package:firebase_chat/pages/profile/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,7 +22,7 @@ class ApplicationPage extends GetView<ApplicationController> {
           ),
           ContactPage(),
           Center(
-            child: Text("Profile"),
+            child: ProfilePage(),
           ),
         ],
       );

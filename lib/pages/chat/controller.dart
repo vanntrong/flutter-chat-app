@@ -35,6 +35,17 @@ class ChatController extends GetxController {
     }
   }
 
+  Future imgFromCamera() {
+    return _picker.pickImage(source: ImageSource.camera).then((pickedFile) {
+      if (pickedFile != null) {
+        _photo = File(pickedFile.path);
+        uploadFile();
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
+
   Future getImgUrl(String name) async {
     final spaceRef = FirebaseStorage.instance.ref("chat").child(name);
     var str = await spaceRef.getDownloadURL();
@@ -158,7 +169,6 @@ class ChatController extends GetxController {
         }
       });
       state.msgContentList.refresh();
-      msgScrolling.jumpTo(msgScrolling.position.maxScrollExtent);
     }, onError: (error) => print("Listen failed: ${error.toString()}"));
   }
 

@@ -4,6 +4,7 @@ import 'package:firebase_chat/pages/message/state.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:pull_to_refresh/pull_to_refresh.dart";
+import "package:location/location.dart";
 
 class MessageController extends GetxController {
   MessageController();
